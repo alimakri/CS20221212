@@ -26,7 +26,7 @@ namespace Factory
         public string Nom;
         public string Ville;
         public override string ToString()
-        {
+        { 
             return $"{Nom} - {Ville}";
         }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MultiThread
 {
-    delegate void CompteurDelegate();
+    //delegate void CompteurDelegate();
     internal class Program
     {
         static void Main(string[] args)
@@ -15,8 +15,8 @@ namespace MultiThread
             var c1 = new Compteur { Nom = "C1", Min = 1, Max = 10, Couleur = ConsoleColor.Cyan, Pause = 2000 };
             var c2 = new Compteur { Nom = "C2", Min = 1, Max = 100, Couleur = ConsoleColor.Green, Pause = 200 };
 
-            var d1 = new CompteurDelegate(c1.Compter);
-            var d2 = new CompteurDelegate(c2.Compter);
+            var d1 = new Action(c1.Compter);
+            var d2 = new Action(c2.Compter);
 
             d1.BeginInvoke(new AsyncCallback(Retour), "Compteur 1");
 
@@ -33,7 +33,21 @@ namespace MultiThread
     }
     class Compteur
     {
-        public string Nom;
+        // V1
+        //public string Nom { get; set; } = "";
+
+        // V2
+        public string Nom
+        {
+            get { return nom; }
+            set { nom = value; }
+        }
+        private string nom = "";
+
+        // V3
+        //public string Nom;
+
+
         public int Min;
         public int Max;
         public int Pause;

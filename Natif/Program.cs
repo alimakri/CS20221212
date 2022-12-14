@@ -23,8 +23,22 @@ namespace Natif
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnx;
             cmd.CommandText = "GetTopN";
-            cmd.Parameters.Add(new SqlParameter("n", 3));
+            cmd.Parameters.Add(new SqlParameter("data", @"<personnes><personne id=""1""/><personne id=""13""/><personne id=""26""/></personnes>"));
             // select BusinessEntityID, FirstName, LastName from Person.Person where BusinessEntityID < 10
+            /*
+             *ALTER PROC [dbo].[GetTopN](@data xml)
+                AS
+                select 
+	                T.N.value('@id[1]', 'int') id,
+	                T.N.value('ville[1]', 'nvarchar(MAX)') City
+                into #t
+                from 
+	                @data.nodes('personnes/personne') as T(N)
+
+                select BusinessEntityID, FirstName, LastName from Person.Person 
+                where BusinessEntityID in (select id from #t)
+                GO
+             */
 
             //ModifModeConnecte(cnx, 1);
             ModeConnecte(cmd);

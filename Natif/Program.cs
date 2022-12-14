@@ -20,15 +20,17 @@ namespace Natif
             cnx.Open();
 
             var cmd = new SqlCommand();
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnx;
-            cmd.CommandText = "select BusinessEntityID, FirstName, LastName from Person.Person where BusinessEntityID < 10";
+            cmd.CommandText = "GetTopN";
+            cmd.Parameters.Add(new SqlParameter("n", 3));
+            // select BusinessEntityID, FirstName, LastName from Person.Person where BusinessEntityID < 10
 
             //ModifModeConnecte(cnx, 1);
-            //ModeConnecte(cmd);
+            ModeConnecte(cmd);
 
-            ModeDeconnecte(cmd);
-            ModifModeDeconnecte(1);
+            //ModeDeconnecte(cmd);
+            //ModifModeDeconnecte(1);
 
             Console.ReadLine();
         }

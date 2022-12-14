@@ -6,16 +6,56 @@
         xmlns:local="clr-namespace:DemoWpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" FontSize="22" Foreground="Green" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Utilisateur}"/>
-        <Button Grid.Column="1" Width="100" Height="100" Command="{Binding OkCommand}" >Ok</Button>
-    </Grid>
+    <TabControl>
+        <TabItem Header="Demo 1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontSize="22" Foreground="Green" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Utilisateur}"/>
+
+                <Button Grid.Column="1" Width="100" Height="100" Command="{Binding OkCommand}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding ElementName=grid1, Path=ItemsSource.Count}" FontWeight="Bold"/>
+                        <TextBlock Text="Niveau 2"/>
+                        <TextBlock Text="Ok"/>
+                    </StackPanel>
+                </Button>
+
+
+                <DataGrid x:Name="grid1" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding ListePersonne}" 
+                  SelectedItem="{Binding PersonneSelect}" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" Visibility="Hidden"/>
+                        <DataGridTextColumn Binding="{Binding Nom}" >
+                            <DataGridTextColumn.Header>
+                                <TextBlock Text="Name" FontWeight="Bold" Foreground="Red"/>
+                            </DataGridTextColumn.Header>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Ville}">
+                            <DataGridTextColumn.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="City" FontWeight="Bold" Foreground="Green"/>
+                                    <Button Content="Tri" Margin="10,0"/>
+                                </StackPanel>
+                            </DataGridTextColumn.Header>
+                        </DataGridTextColumn>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Photo}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </TabItem>
+        <TabItem Header="demo 2"></TabItem>
+    </TabControl>
 </Window>

@@ -35,7 +35,11 @@ namespace DemoWpfApp.Bases
             _canExecute = canExecute;
         }
 
-        #endregion 
+        public RelayCommand()
+        {
+        }
+
+        #endregion
 
         #region ICommand Members
 

@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="{Binding Utilisateur}"/>
-        <Button Width="100" Height="100" >Ok</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" FontSize="22" Foreground="Green" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Utilisateur}"/>
+        <Button Grid.Column="1" Width="100" Height="100" Command="{Binding OkCommand}" >Ok</Button>
     </Grid>
 </Window>

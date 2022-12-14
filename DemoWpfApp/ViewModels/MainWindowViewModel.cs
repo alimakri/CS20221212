@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using GalaSoft.MvvmLight.Command;
+using DemoWpfApp.Bases;
 
 namespace DemoWpfApp.ViewModels
 {

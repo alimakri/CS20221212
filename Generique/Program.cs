@@ -10,13 +10,22 @@ namespace Generique
     {
         static void Main(string[] args)
         {
-            var a = new ActiviteSportive<Foot>();
+            var touche = "Rugby";
+
+            switch (touche)
+            {
+                case "Rugby": a = new ActiviteSportive<Rugby>(); break;
+                case "Foot": a = new ActiviteSportive<Foot>(); break;
+            }
+            var 
+            
             var balle=a.TypeBalle();
             Console.WriteLine(balle);
             Console.ReadLine();
         }
+
     }
-    class ActiviteSportive<T> where T : SportAvecBalle, new()
+    class ActiviteSportive<T>  where T : SportAvecBalle, new() 
     {
         public string TypeBalle()
         {

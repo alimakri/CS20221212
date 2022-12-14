@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DemoWpfApp.ViewModels;
 
 namespace DemoWpfApp
 {
@@ -23,6 +24,12 @@ namespace DemoWpfApp
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
+
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("Hello");
+        //}
     }
 }

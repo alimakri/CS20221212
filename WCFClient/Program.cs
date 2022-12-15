@@ -27,6 +27,7 @@ namespace WCFClient
             Console.WriteLine(resultat);
 
             Console.ReadLine();
+            // netsh http add urlacl url=http://+:1234/ user=makri
         }
     }
 }

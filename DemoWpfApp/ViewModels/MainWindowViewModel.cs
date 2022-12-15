@@ -21,16 +21,10 @@ namespace DemoWpfApp.ViewModels
         public MainWindowViewModel()
         {
             // Command
-            OkCommand = new RelayCommand(Ok, o=>true);  
+            OkCommand = new RelayCommand(Ok, o=>true);
 
             // Init
-            ListePersonne = new List<PersonneModel>
-            {
-                new PersonneModel {Id= 1, Nom="Alice", Ville="Roman", Photo="Alice.png" },
-                new PersonneModel {Id= 2, Nom="Morgane", Ville="marseille", Photo="morgane.png" },
-                new PersonneModel {Id= 3, Nom="Denis", Ville="Villeurbanne", Photo="denis.png" }
-            };
-
+            ListePersonne = new PersonnesModel();
         }
 
         private void Ok(object obj)

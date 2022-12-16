@@ -10,17 +10,16 @@ namespace Generique
     {
         static void Main(string[] args)
         {
-            var touche = "Rugby";
+            //var touche = "Rugby";
 
-            switch (touche)
-            {
-                case "Rugby": a = new ActiviteSportive<Rugby>(); break;
-                case "Foot": a = new ActiviteSportive<Foot>(); break;
-            }
-            var 
+            //switch (touche)
+            //{
+            //    case "Rugby": a = new ActiviteSportive<Rugby>(); break;
+            //    case "Foot": a = new ActiviteSportive<Foot>(); break;
+            //}
             
-            var balle=a.TypeBalle();
-            Console.WriteLine(balle);
+            //var balle=a.TypeBalle();
+            //Console.WriteLine(balle);
             Console.ReadLine();
         }
 

@@ -42,7 +42,7 @@ namespace ModeleEntite
 
                 }
             }
-
+            var ps = context.GetTopN(@"<personnes><personne id=""1""/><personne id=""2""/></personnes>");
             Console.ReadLine();
         }
     }

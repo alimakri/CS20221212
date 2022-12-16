@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33122.133
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.916
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{57B773DD-7011-4802-BACA-FBC3247FA72C}"
 EndProject
@@ -57,9 +57,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoRestFull", "DemoRestFul
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{507ED6EA-C743-4CE1-9C94-BCF818A1A47D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiServer", "WebApiServer\WebApiServer.csproj", "{AAFCB8EE-7E57-40CF-A48B-1B9D7142C7AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiServer", "WebApiServer\WebApiServer.csproj", "{AAFCB8EE-7E57-40CF-A48B-1B9D7142C7AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication47", "WebApplication47\WebApplication47.csproj", "{90E38B60-FB08-43C1-921E-60AD89FC2776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetFramework", "AspnetFramework\AspnetFramework.csproj", "{F82156F4-3383-4AC5-BEBE-75F447ADFF00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{90E38B60-FB08-43C1-921E-60AD89FC2776}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90E38B60-FB08-43C1-921E-60AD89FC2776}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90E38B60-FB08-43C1-921E-60AD89FC2776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82156F4-3383-4AC5-BEBE-75F447ADFF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82156F4-3383-4AC5-BEBE-75F447ADFF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82156F4-3383-4AC5-BEBE-75F447ADFF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82156F4-3383-4AC5-BEBE-75F447ADFF00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -188,6 +194,7 @@ Global
 		{981269EA-50ED-455E-9F59-F127134FDBC5} = {309BDF34-0A09-42B2-91EE-7DDD28AF8167}
 		{AAFCB8EE-7E57-40CF-A48B-1B9D7142C7AB} = {507ED6EA-C743-4CE1-9C94-BCF818A1A47D}
 		{90E38B60-FB08-43C1-921E-60AD89FC2776} = {507ED6EA-C743-4CE1-9C94-BCF818A1A47D}
+		{F82156F4-3383-4AC5-BEBE-75F447ADFF00} = {507ED6EA-C743-4CE1-9C94-BCF818A1A47D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB267C61-9829-4F99-9180-8401CD194ABD}

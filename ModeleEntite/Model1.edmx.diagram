@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="AdventureWorks2019Model.ProductSubcategory" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <AssociationConnector Association="AdventureWorks2019Model.FK_Product_ProductSubcategory_ProductSubcategoryID" ManuallyRouted="false" />
         <AssociationConnector Association="AdventureWorks2019Model.FK_ProductSubcategory_ProductCategory_ProductCategoryID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AdventureWorks2019Model.Person" Width="1.5" PointX="9.375" PointY="1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

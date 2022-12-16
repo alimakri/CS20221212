@@ -19,8 +19,8 @@ namespace DemoCore.Controllers
         [AllowAnonymous]
         public IActionResult Index()
         {
-            Logger.LogInformation("Trace dans PrivateController.Index");
-            //Serilog.Log.Information();
+            //Logger.LogInformation("Trace dans PrivateController.Index");
+            Serilog.Log.Error("Serilog. Trace dans PrivateController.Index");
             ViewBag.Cnx = ConnectionString;
             return View();
         }

@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index"; string nom="Paul"; string inviteCheck = "";
+    if (ViewBag.Personne != null)
+    {
+        nom = ViewBag.Personne.Nom;
+        inviteCheck = ViewBag.Personne.Invite ? "checked='checked'": "" ;
+    }
+}
+
+<h2>Formulaire</h2>
+<form method="get">
+    <input type="text" value="@nom" name="nom"/>
+    <input type="checkbox" @inviteCheck name="invite"/>
+    <input type="submit" value="Envoyer" />
+</form>
+

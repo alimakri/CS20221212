@@ -1,3 +1,5 @@
+using AspnetFramework.Controllers;
+using AspnetFramework.Customization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,8 @@ namespace AspnetFramework
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //ModelBinders.Binders.Add(typeof(Personne), new PersonneBinder());
         }
     }
 }
